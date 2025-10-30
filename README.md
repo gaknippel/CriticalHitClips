@@ -1,5 +1,5 @@
 # CritTF2Clips
-A website for the CritTF2Clips Youtube channel that allows you to submit clips!
+A website for the CritTF2Clips Youtube channel that allows you to submit clips! (still in progress)
 
 # React + TypeScript + Vite
 
