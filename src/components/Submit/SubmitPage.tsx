@@ -16,7 +16,6 @@ const Submit = () => {
 
 
     try {
-      // Send the data to your serverless function
       const response = await fetch('/api/submit', {
         method: 'POST',
         headers: {
@@ -26,16 +25,14 @@ const Submit = () => {
       });
 
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error('network response didnt work');
       }
 
-      // Update status and clear the form on success
-      setStatus('Success! Your clip was submitted.');
+      setStatus('success! your clip has been submitted');
       (e.target as HTMLFormElement).reset();
 
     } catch (error) {
-      // Show an error message if anything fails
-      setStatus('Error: Could not submit your clip.');
+      setStatus('Error: could not submit your clip.');
       console.error('Fetch error:', error);
     }
   }
