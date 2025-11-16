@@ -8,7 +8,6 @@
       "path": "./tsconfig.node.json"
     }
   ],
-  "ignoreDeprecations": "6.0",
   "compilerOptions": {
     "moduleResolution": "bundler",
     "paths": {
