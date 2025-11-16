@@ -8,7 +8,7 @@ const HomePage = () => {
     <>
       <SplitText
         className='welcome-message'
-        text="Welcome to CritTF2Clips!"
+        text="Welcome to CriticalHitClips!"
         delay={15}
       />
     </>

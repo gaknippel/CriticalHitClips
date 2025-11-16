@@ -1,0 +1,10 @@
+.submit-welcome {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    color: white;
+    font-family: "Readex Pro", sans-serif;
+  }
+  
