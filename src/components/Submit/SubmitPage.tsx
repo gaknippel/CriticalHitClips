@@ -61,7 +61,6 @@ const Submit = () => {
           <textarea id="message" name="message" rows={2} />
         </div>
         
-        {/* Simple styling for the submit button */}
         <button 
           type="submit" 
           style={{ cursor: 'pointer', padding: '10px 20px' }}
@@ -69,7 +68,6 @@ const Submit = () => {
           Submit Clip
         </button>
         
-        {/* This message will show 'Submitting...', 'Success!', or 'Error:' */}
         {status && <p className="status-message">{status}</p>}
       </form>
     </div>
