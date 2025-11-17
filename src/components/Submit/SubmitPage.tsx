@@ -38,8 +38,6 @@ const Submit = () => {
   }
 
 
-
-
   return (
     <div>
       
@@ -47,8 +45,38 @@ const Submit = () => {
         text="Submit a Clip"
         delay={15}
       />
+
+      <div className="submit-body">
+      <form onSubmit={handleSubmit}>
+        <div className="form-body">
+          <label htmlFor="name">Your Name (optional)</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <div className="form-group">
+          <label htmlFor="clipUrl">Clip URL (Twitch, YouTube)</label>
+          <input type="url" id="clipUrl" name="clipUrl" required />
+        </div>
+        <div className="form-group">
+          <label htmlFor="message">Message (Optional)</label>
+          <textarea id="message" name="message" rows={2} />
+        </div>
+        
+        {/* Simple styling for the submit button */}
+        <button 
+          type="submit" 
+          style={{ cursor: 'pointer', padding: '10px 20px' }}
+        >
+          Submit Clip
+        </button>
+        
+        {/* This message will show 'Submitting...', 'Success!', or 'Error:' */}
+        {status && <p className="status-message">{status}</p>}
+      </form>
+    </div>
       
     </div>
+
+    
   );
 };
 

@@ -10,7 +10,7 @@ const Footer = () => {
                 <a href="/privacy-policy">Privacy Policy</a>
             </div>
             <div className="footer-copyright">
-                © 2025 Greyson Knippel. All Rights Reserved.
+                © 2025 Greyson Knippel
             </div>
         </footer>
     );
