@@ -12,7 +12,7 @@ try {
 await resend.emails.send({
   from: 'onboarding@resend.dev',
   to: 'criticalhitclips@protonmail.com',
-  subject: 'Hello World',
+  subject: 'Clip Submission',
   html: `
           <h3>New Clip Submission:</h3>
           <p><strong>Name:</strong> ${submitterName || 'Not provided'}</p>
