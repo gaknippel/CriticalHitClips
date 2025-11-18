@@ -1,6 +1,5 @@
 import './AboutPage.css';
 import SplitText from '../ReactBitsStuff/SplitText';
-import type { DownloadCloud } from 'lucide-react';
 
 
 const AboutPage = () => {

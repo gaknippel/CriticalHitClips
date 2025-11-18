@@ -1,6 +1,4 @@
-import LightRays from '../ReactBitsStuff/LightRays';
 import SplitText from '../ReactBitsStuff/SplitText';
-import logo from '../../assets/tf2darklogo.png';
 import './HomePage.css';
 
 const HomePage = () => {
