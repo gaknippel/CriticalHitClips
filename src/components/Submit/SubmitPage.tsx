@@ -1,6 +1,8 @@
 import './SubmitPage.css';
 import SplitText from '../ReactBitsStuff/SplitText';
 import React, { useState } from 'react';
+import FadeContent from '../ReactBitsStuff/FadeContent/FadeContent';
+
 const Submit = () => {
 
   const[status, setStatus]  = useState('');
@@ -44,6 +46,8 @@ const Submit = () => {
         text="Submit a Clip!"
         delay={15}
       />
+
+      <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
         <div className="submit-left">
           <form onSubmit={handleSubmit}>
             <div className="form-body">
@@ -65,7 +69,8 @@ const Submit = () => {
             
             {status && <p className="status-message">{status}</p>}
           </form>
-        </div>   
+        </div>  
+        </FadeContent> 
   </div>
 
     
