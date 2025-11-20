@@ -29,7 +29,7 @@ const Submit = () => {
         throw new Error('network response didnt work');
       }
 
-      setStatus('success! your clip has been submitted');
+      setStatus('Success! your clip has been submitted');
       (e.target as HTMLFormElement).reset();
 
     } catch (error) {
@@ -51,15 +51,15 @@ const Submit = () => {
         <div className="submit-left">
           <form onSubmit={handleSubmit}>
             <div className="form-body">
-              <label htmlFor="name">Your Name (optional)</label>
+              <label htmlFor="name">Name (optional)</label>
               <input type="text" id="name" name="name" />
             </div>
             <div className="form-group">
               <label htmlFor="clipUrl">Clip URL (Twitch, YouTube)</label>
-              <input type="url" id="clipUrl" name="clipUrl" required />
+              <input type="url" id="clipURl" name="clipURL" required />
             </div>
             <div className="form-group">
-              <label htmlFor="message">Message (Optional)</label>
+              <label htmlFor="message">Message (optional)</label>
               <textarea id="message" name="message" rows={2} />
             </div>
             
