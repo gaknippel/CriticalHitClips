@@ -47,7 +47,7 @@ const Submit = () => {
         delay={15}
       />
 
-      <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
+      <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}> 
         <div className="submit-left">
           <form onSubmit={handleSubmit}>
             <div className="form-body">
