@@ -1,6 +1,6 @@
 .submit-welcome {
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 3rem;
@@ -11,7 +11,7 @@
 
   .submit-left{ 
     position: absolute;
-    top: 35%;
+    top: 30%;
     left: 30%;
     transform: translateX(-50%);
     font-size: 3rem;
