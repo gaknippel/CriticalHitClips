@@ -1,32 +1,32 @@
 .app-header {
-  position: absolute; /* Take header out of normal flow */
-  z-index: 10; /* Ensure it's on top of other content */
-  left: 50%; /* Position the left edge at the center */
-  transform: translateX(-50%); /* Shift it left by half its own width to truly center it */
+  position: absolute; 
+  z-index: 10; 
+  left: 50%; 
+  transform: translateX(-50%); 
   background-color: #202020;
   padding: 1rem;
   display: flex;
   justify-content: center;
-  margin-top: 20px; /* Offset from the top */
-  border-radius: 30px; /* Rounded corners for the header */
-  width: fit-content; /* Make header only as wide as its content */
+  margin-top: 20px; 
+  border-radius: 30px; 
+  width: fit-content; 
 }
 
 .app-header nav a {
   color: white;
   text-decoration: none;
-  font-family: "Inter", sans-serif;
+  font-family: "Readex Pro", sans-serif;
   font-optical-sizing: auto;
 
-  margin: 0 10px; /* Space between bubbles */
+  margin: 0 10px; 
   font-size: 1.1rem;
   transition: background-color 0.3s ease, color 0.3s ease;
-  background-color: #333; /* Bubble color */
-  padding: 10px 20px; /* Size of the bubble */
-  border-radius: 25px; /* Rounded corners for the bubble */
+  background-color: #333; 
+  padding: 10px 20px;
+  border-radius: 25px; 
 }
 
 .app-header nav a:hover {
-  background-color: #967544;
+  background-color: #db9937;
   color: white;
 }

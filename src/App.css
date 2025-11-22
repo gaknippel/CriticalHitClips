@@ -1,8 +1,19 @@
 .pageBG{
 position: relative;
 width: 100vw;
-height: 100vh;
+min-height: 100vh;
 display: flex;
+flex-direction: column;
+
+overflow-x: hidden;
+}
+
+.content-wrap {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  width: 100%;
 }
 
 

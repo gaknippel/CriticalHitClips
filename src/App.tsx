@@ -29,7 +29,9 @@ function App() {
           <img src={logo} alt="logo" />
         </a>
       </div>
+      <div className="content-wrap">
         <Outlet />
+      </div>
         <Footer />
       </div>
     </div>
