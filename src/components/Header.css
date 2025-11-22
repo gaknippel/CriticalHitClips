@@ -4,12 +4,24 @@
   left: 50%; 
   transform: translateX(-50%); 
   background-color: #202020;
-  padding: 1rem;
+  padding: 0.8rem;
   display: flex;
   justify-content: center;
   margin-top: 20px; 
-  border-radius: 30px; 
+  border-radius: 50px; 
+  
+  /* Change: Ensure it doesn't overflow the screen on small devices */
   width: fit-content; 
+  max-width: 95vw; 
+}
+
+/* We need to make sure the <nav> tag acts as a flex container too */
+.app-header nav {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to drop to next line if screen is TINY */
+  justify-content: center;
+  align-items: center;
+  gap: 5px; /* Replaces the margin on links for cleaner spacing */
 }
 
 .app-header nav a {
@@ -17,16 +29,47 @@
   text-decoration: none;
   font-family: "Readex Pro", sans-serif;
   font-optical-sizing: auto;
-
-  margin: 0 10px; 
+  
+  /* We use 'gap' in the parent now, but keeping small margin is okay */
+  margin: 0 5px; 
   font-size: 1.1rem;
   transition: background-color 0.3s ease, color 0.3s ease;
   background-color: #333; 
   padding: 10px 20px;
   border-radius: 25px; 
+  
+  /* Prevents the text from breaking inside the button */
+  white-space: nowrap; 
 }
 
 .app-header nav a:hover {
   background-color: #db9937;
   color: white;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+/* Apply these rules only when screen is smaller than 768px (Tablets/Phones) */
+@media (max-width: 768px) {
+  
+  .app-header {
+    padding: 0.5rem; /* Shrink the container padding */
+    width: 90%; /* Take up most of the screen width */
+    border-radius: 20px; /* Slightly less round */
+  }
+
+  .app-header nav a {
+    font-size: 0.9rem; /* Smaller text */
+    padding: 8px 12px; /* Smaller buttons */
+    margin: 2px; /* Tighter spacing */
+    flex: 1 1 auto; /* Allows buttons to shrink/grow to fit the row */
+    text-align: center;
+  }
+}
+
+/* Extra Small Screens (Old phones) */
+@media (max-width: 400px) {
+  .app-header nav a {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
 }

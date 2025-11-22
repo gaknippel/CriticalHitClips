@@ -1,0 +1,30 @@
+.about-welcome {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  color: white;
+  font-family: "Readex Pro", sans-serif;
+}
+
+.about-body1 {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  color: white;
+  font-family: "Readex Pro", sans-serif;
+}
+
+.animBG{
+position: absolute;
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgb(43, 43, 43);
+z-index: 0;
+}
