@@ -66,3 +66,24 @@
   object-fit: cover;
   display: block;
 }
+
+
+@media (max-width: 768px) {
+  .support-content-box {
+    flex-direction: column-reverse; /* Stacks them: Video on Top, Form on Bottom */
+    /* Or use 'column' if you want Form on Top, Video on Bottom */
+  }
+
+  .support-welcome {
+    font-size: 2rem; /* Smaller text for mobile */
+  }
+
+  .support-left {
+    padding: 20px; /* Less padding on mobile */
+  }
+
+  .support-right {
+    height: 200px; /* Limit video height on phone */
+    min-height: auto;
+  }
+}
