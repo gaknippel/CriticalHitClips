@@ -1,6 +1,8 @@
 import './SupportPage.css';
 import SplitText from '../ReactBitsStuff/SplitText';
 import steamFacepalm from '../../assets/steamFacepalm.gif'
+import FadeContent from '../ReactBitsStuff/FadeContent/FadeContent';
+
 
   const handleAnimationComplete = () => {
 
@@ -17,6 +19,7 @@ const SupportPage = () => {
         text="Support"
         delay={15}
       />
+    <FadeContent blur={false} duration={500} easing="ease-out" initialOpacity={0}>
        <div className="support-content-box">
               <SplitText
 
@@ -54,6 +57,7 @@ const SupportPage = () => {
               />
             </div>
        </div>
+    </FadeContent>
     </div>
   );
 };
