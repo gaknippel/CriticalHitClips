@@ -17,7 +17,7 @@ function App() {
         raysSpeed={1}
         lightSpread={0.8}
         rayLength={1}
-        followMouse={true}
+        followMouse={false}
         mouseInfluence={0.01}
         noiseAmount={0.1}
         distortion={0.05}
