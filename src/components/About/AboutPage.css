@@ -1,30 +1,17 @@
-.about-welcome {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 3rem;
-  color: white;
-  font-family: "Readex Pro", sans-serif;
+.submit-page-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
-.about-body1 {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translateX(-50%);
+.welcome-message {
+  font-family: "Readex Pro", sans-serif;
   font-size: 3rem;
   color: white;
-  font-family: "Readex Pro", sans-serif;
-}
-
-.animBG{
-position: absolute;
-width: 100vw;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: rgb(43, 43, 43);
-z-index: 0;
+  text-align: center;
+  margin-bottom: 0rem; 
 }
