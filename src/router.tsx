@@ -1,15 +1,15 @@
 import { createBrowserRouter } from 'react-router-dom';
-import App from './App';
+import Layout from './Layout'
 import AboutPage from './components/About/AboutPage';
 import HomePage from './components/Home/HomePage';
-import Privacy from './components/Privacy/PrivacyPage'
+import Privacy from './components/Privacy/PrivacyPage';
 import SubmitPage from './components/Submit/SubmitPage';
-import SupportPage from './components/Support/SupportPage'
+import SupportPage from './components/Support/SupportPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Layout />,
     children: [
       {
         index: true,

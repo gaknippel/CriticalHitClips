@@ -1,11 +1,15 @@
-.submit-page-wrapper {
-  min-height: 100vh;
+.about-page-wrapper {
   width: 100%;
+  flex: 1; 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
+  
+  justify-content: flex-start; 
+  
+  padding: 120px 20px 40px 20px;
+  
+  box-sizing: border-box;
 }
 
 .welcome-message {
@@ -13,5 +17,69 @@
   font-size: 3rem;
   color: white;
   text-align: center;
-  margin-bottom: 0rem; 
+  margin-top: -40px;
+}
+
+.about-content-box {
+  width: 100%;
+  max-width: 800px; 
+  background-color: rgba(32, 32, 32, 0.5); 
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  
+  color: #e0e0e0;
+  font-family: "Readex Pro", sans-serif;
+  line-height: 1.6;
+  margin-top: 10%;
+}
+
+.about-section {
+  margin-bottom: 30px; 
+}
+
+.about-content-box h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+  
+  display: flex; 
+  align-items: center; 
+  width: fit-content; 
+  
+  border-bottom: 2px solid #c6812d; 
+  padding-bottom: 5px;
+}
+
+.header-icon {
+  height: 65px; 
+  width: auto;  
+  margin-left: 10px; 
+  display: block;
+}
+
+.about-content-box p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .about-page-wrapper {
+    padding-top: 100px; 
+  }
+
+  .about-content-box {
+    padding: 25px;
+  }
+  .welcome-message {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .about-content-box h3 {
+    font-size: 1.3rem;
+  }
+  .header-icon {
+    height: 25px; 
+  }
 }

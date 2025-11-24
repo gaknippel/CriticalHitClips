@@ -1,25 +1,23 @@
 .submit-page-wrapper {
-  min-height: 100vh;
+  /* Removed min-height: 100vh because Layout handles it */
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Center vertically */
   padding: 20px;
+  flex: 1; /* Allow it to grow within the content-wrap */
 }
-
 
 .submit-welcome {
   font-family: "Readex Pro", sans-serif;
   font-size: 3rem;
   color: white;
   text-align: center;
-  margin-bottom: 0rem; 
+  margin-bottom: 2rem; 
 }
 
-
 .submit-content-box {
-  margin-bottom: -5rem; 
   display: flex; 
   width: 100%;
   max-width: 1100px; 
@@ -28,7 +26,6 @@
   overflow: hidden; 
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
-
 
 .submit-left {
   flex: 1; 
@@ -39,7 +36,6 @@
   flex-direction: column;
   justify-content: center;
 }
-
 
 .submit-right {
   flex: 1; 
@@ -53,7 +49,6 @@
   object-fit: cover; 
   display: block;
 }
-
 
 .form-body,
 .form-group {
@@ -114,26 +109,24 @@
   margin-top: 15px;
   text-align: center;
   font-weight: bold;
-  
 }
-
 
 @media (max-width: 768px) {
   .submit-content-box {
-    flex-direction: column-reverse; /* Stacks them: Video on Top, Form on Bottom */
-    /* Or use 'column' if you want Form on Top, Video on Bottom */
+    flex-direction: column-reverse; 
   }
 
   .submit-welcome {
-    font-size: 2rem; /* Smaller text for mobile */
+    font-size: 2rem; 
   }
 
   .submit-left {
-    padding: 20px; /* Less padding on mobile */
+    padding: 20px; 
   }
 
   .submit-right {
-    height: 200px; /* Limit video height on phone */
+    height: 200px; 
     min-height: auto;
+    width: 100%;
   }
 }

@@ -1,16 +1,15 @@
 import { Outlet } from 'react-router-dom';
-import './App.css'
-import "@radix-ui/themes/styles.css";
-import Header from './components/Header';
+import Header from './components/Header'
 import Footer from './components/Footer'
+import LightRays from './components/ReactBitsStuff/LightRays'
 import logo from './assets/tf2darklogo.png'
-import LightRays from './components/ReactBitsStuff/LightRays';
+import './App.css'
 
-function App() {
-
+const Layout = () => {
   return (
     <div>
       <Header />
+
       <LightRays
         raysOrigin="top-center"
         raysColor="#ffffffff"
@@ -23,19 +22,22 @@ function App() {
         distortion={0.05}
         className="animBG"
       />
+      
       <div className='pageBG'>
+        
         <div className='spinningLogo'>
-        <a href="/">
-          <img src={logo} alt="logo" />
-        </a>
-      </div>
-      <div className="content-wrap">
-        <Outlet />
-      </div>
+          <a href="/">
+            <img src={logo} alt="CritTF2Clips Logo" />
+          </a>
+        </div>
+
+        <div className="content-wrap">
+          <Outlet />
+        </div>        
         <Footer />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default Layout;

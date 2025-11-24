@@ -1,36 +1,28 @@
+.support-page-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  padding: 20px;
+  flex: 1; 
+}
+
 .support-welcome {
   font-family: "Readex Pro", sans-serif;
   font-size: 3rem;
   color: white;
   text-align: center;
-  margin-bottom: 0rem; 
-}
+  margin-top: -230px;
 
-.support-page-wrapper {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
 }
-
-.welcome-message {
-  font-family: "Readex Pro", sans-serif;
-  font-size: 3rem;
-  color: white;
-  text-align: center;
-  margin-bottom: 0rem; 
-}
-
 
 .support-content-box {
   display: flex; 
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  max-width: 500px; 
+  width: 100%;
+  max-width: 500px;
   background-color: rgba(32, 32, 32, 0.5); 
   border-radius: 20px;
   overflow: hidden; 
@@ -43,47 +35,46 @@
   color: white;
   font-family: "Readex Pro", sans-serif;
   display: flex;
-  font-size: 125%;
+  font-size: 1.5rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .support-right {
   flex: 1; 
   display: flex;
   position: relative;
-  min-height: 200px;
-  flex-direction: column;
+  min-height: 150px;
   justify-content: center;
   align-items: center;
 }
 
 .support-right img {
-  margin-bottom: 2rem; 
-  width: 80%;
-  height: 80%;
+  width: 85%;
+  height: 85%;
   object-fit: cover;
   display: block;
 }
 
-
 @media (max-width: 768px) {
   .support-content-box {
-    flex-direction: column-reverse; /* Stacks them: Video on Top, Form on Bottom */
-    /* Or use 'column' if you want Form on Top, Video on Bottom */
+    flex-direction: column-reverse; 
   }
 
   .support-welcome {
-    font-size: 2rem; /* Smaller text for mobile */
+    font-size: 2rem; 
   }
 
   .support-left {
-    padding: 20px; /* Less padding on mobile */
+    padding: 20px;
+    font-size: 1rem;
   }
 
   .support-right {
-    height: 200px; /* Limit video height on phone */
-    min-height: auto;
+    height: 200px; 
+    width: 100%;
+    flex: none;
   }
 }
