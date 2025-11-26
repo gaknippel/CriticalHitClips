@@ -13,7 +13,7 @@
   font-size: 3rem;
   color: white;
   text-align: center;
-  margin-top: -230px;
+  margin-bottom: 2rem;
 
 }
 
@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
   background-color: rgba(32, 32, 32, 0.5); 
   border-radius: 20px;
   overflow: hidden; 
@@ -54,7 +54,7 @@
 .support-right img {
   width: 85%;
   height: 85%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 

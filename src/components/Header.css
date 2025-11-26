@@ -1,20 +1,17 @@
 .app-header {
-  position: absolute; 
-  z-index: 10; 
+  position: fixed; 
+  z-index: 100; 
+  top: 20px;
   left: 50%; 
   transform: translateX(-50%); 
   background-color: #202020;
   padding: 0.8rem;
   display: flex;
   justify-content: center;
-  margin-top: 20px; 
   border-radius: 50px; 
-  
-
   width: fit-content; 
   max-width: 95vw; 
 }
-
 
 .app-header nav {
   display: flex;
@@ -29,14 +26,12 @@
   text-decoration: none;
   font-family: "Readex Pro", sans-serif;
   font-optical-sizing: auto;
-  
   margin: 0 5px; 
   font-size: 1.1rem;
   transition: background-color 0.3s ease, color 0.3s ease;
   background-color: #333; 
   padding: 10px 20px;
   border-radius: 25px; 
-  
   white-space: nowrap; 
 }
 
@@ -45,9 +40,7 @@
   color: white;
 }
 
-
 @media (max-width: 768px) {
-  
   .app-header {
     padding: 0.5rem; 
     width: 90%; 

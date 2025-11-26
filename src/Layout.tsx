@@ -8,8 +8,6 @@ import './App.css'
 const Layout = () => {
   return (
     <div>
-      <Header />
-
       <LightRays
         raysOrigin="top-center"
         raysColor="#ffffffff"
@@ -23,14 +21,15 @@ const Layout = () => {
         className="animBG"
       />
       
-      <div className='pageBG'>
-        
-        <div className='spinningLogo'>
-          <a href="/">
-            <img src={logo} alt="CritTF2Clips Logo" />
-          </a>
-        </div>
+      <div className='spinningLogo'>
+        <a href="/">
+          <img src={logo} alt="CritTF2Clips Logo" />
+        </a>
+      </div>
 
+      <Header />
+      
+      <div className='pageBG'>
         <div className="content-wrap">
           <Outlet />
         </div>        
