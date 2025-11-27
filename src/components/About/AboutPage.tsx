@@ -33,7 +33,7 @@ const AboutPage = () => {
 
           <div className="about-section">
             <h3>
-              how do i be featured?
+              how do i get featured?
               <img src={steamSleepy} alt="sleepy" className="header-icon" />
             </h3>
             <p>
