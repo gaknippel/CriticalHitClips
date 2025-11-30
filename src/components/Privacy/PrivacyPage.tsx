@@ -1,6 +1,5 @@
 import './PrivacyPage.css';
 import SplitText from '../../components/ReactBitsStuff/SplitText'; 
-import steamFacepalm from '../../assets/steamFacepalm.gif';
 import FadeContent from '../../components/ReactBitsStuff/FadeContent/FadeContent';
 
 const handleAnimationComplete = () => {
