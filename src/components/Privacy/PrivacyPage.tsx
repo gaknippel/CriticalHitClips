@@ -21,7 +21,8 @@ const PrivacyPage = () => {
             
             <div className='privacy-body'>
               <SplitText
-                text="problems? contact gaknippel@hotmail.com"
+                text="i will never steal your data/use your channel name for harm, do not worry!
+                also, do not be afraid to be anonymous with your submissions!"
                 delay={15}
                 duration={0.6}
                 ease="power3.out"
