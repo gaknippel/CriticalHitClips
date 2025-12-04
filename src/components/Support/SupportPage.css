@@ -53,8 +53,8 @@
 }
 
 .support-right img {
-  width: 85%;
-  height: 85%;
+  width: 50%;
+  height: 50%;
   object-fit: contain;
   display: block;
 }
