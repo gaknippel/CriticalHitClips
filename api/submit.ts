@@ -9,15 +9,30 @@ export default async (req: VercelRequest, res: VercelResponse) => {
 
 try {
 
+
+const timestamp = new Date().toLocaleString('en-US', {
+  month: 'short',
+  day: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit'
+});
+
+
+
+const uniqueId = Date.now().toString(36);
+const subject = `Clip Submission #${uniqueId}`;
+
+
 await resend.emails.send({
   from: 'onboarding@resend.dev',
   to: 'criticalhitclips@protonmail.com',
-  subject: 'Clip Submission',
+  subject: subject,
   html: `
           <h3>New Clip Submission:</h3>
           <p><strong>Name:</strong> ${submitterName || 'Not provided'}</p>
           <p><strong>URL:</strong> <a href="${clipURL}">${clipURL}</a></p>
           <p><strong>Message:</strong> ${message || 'Not provided'}</p>
+          <p><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
         `,
   });
 
