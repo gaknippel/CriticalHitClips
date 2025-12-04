@@ -27,3 +27,4 @@ replacements.txt
 *.njsproj
 *.sln
 *.sw?
+.vercel
