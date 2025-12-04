@@ -3,7 +3,6 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import LightRays from './components/ReactBitsStuff/LightRays'
 import logo from './assets/tf2darklogo.png'
-import { Analytics } from "@vercel/analytics/next"
 import './App.css'
 
 const Layout = () => {
@@ -35,7 +34,6 @@ const Layout = () => {
           <Outlet />
         </div>        
         <Footer />
-        <Analytics />
       </div>
     </div>
   );
