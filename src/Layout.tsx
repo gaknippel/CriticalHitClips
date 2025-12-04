@@ -1,11 +1,36 @@
 import { Outlet } from 'react-router-dom';
+import { useEffect } from 'react';
 import Header from './components/Header'
 import Footer from './components/Footer'
 import LightRays from './components/ReactBitsStuff/LightRays'
 import logo from './assets/tf2darklogo.png'
 import './App.css'
 
+import steamCryLaugh from './assets/steamCryLaugh.gif';
+import steamCool from './assets/steamCool.gif';
+import steamSleepy from './assets/steamSleepy.gif';
+import steamFacepalm from './assets/steamFacepalm.gif';
+import submitPageClip from './assets/submitPageBG.mp4';
+
+
+
 const Layout = () => {
+    useEffect(() => {
+    //prelaod the gifs
+    const images = [steamCryLaugh, steamCool, steamSleepy, steamFacepalm];
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+
+    // preload video
+    const video = document.createElement('video');
+    video.src = submitPageClip;
+    video.preload = 'auto';
+    video.load();
+  }, []);
+
+
   return (
     <div>
       <LightRays
