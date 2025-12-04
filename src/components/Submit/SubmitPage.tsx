@@ -1,21 +1,23 @@
 import './SubmitPage.css';
-import SplitText from '../../components/ReactBitsStuff/SplitText'; // Adjusted path
+import SplitText from '../../components/ReactBitsStuff/SplitText';
 import React, { useState } from 'react';
-import submitPageClip from '../../assets/submitPageBG.mp4'; // Adjusted path
-import FadeContent from '../../components/ReactBitsStuff/FadeContent/FadeContent'; // Adjusted path
+import submitPageClip from '../../assets/submitPageBG.mp4';
+import FadeContent from '../../components/ReactBitsStuff/FadeContent/FadeContent';
 
 const Submit = () => {
+  const [status, setStatus] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const[status, setStatus]  = useState('');
-
-  const handleSubmit = async (e: React.FormEvent) => 
-  {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (isSubmitting) return; // prevent double submission
+    
+    setIsSubmitting(true);
     setStatus('Submitting...');
 
     const formData = new FormData(e.target as HTMLFormElement);
-    const data = Object.fromEntries(formData.entries());  
-
+    const data = Object.fromEntries(formData.entries());
 
     try {
       const response = await fetch('/api/submit', {
@@ -26,40 +28,56 @@ const Submit = () => {
         body: JSON.stringify(data),
       });
 
-      if (!response.ok) {
-        throw new Error('network response didnt work');
+      const result = await response.json();
+
+      if (response.status === 429) {
+        // rate limited
+        const resetTime = result.resetTime ? new Date(result.resetTime) : null;
+        const timeString = resetTime 
+          ? resetTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
+          : 'later';
+        setStatus(`Too many submissions! Please try again after ${timeString}.`);
+      } else if (!response.ok) {
+        setStatus(result.error || 'Error: could not submit your clip.');
+      } else {
+        setStatus('Success! your clip has been submitted');
+        (e.target as HTMLFormElement).reset();
+        
+        // show remaining submissions if available
+        if (result.remaining !== undefined) {
+          setTimeout(() => {
+            setStatus(`Success! You have ${result.remaining} submission${result.remaining !== 1 ? 's' : ''} remaining this hour.`);
+          }, 2000);
+        }
       }
-
-      setStatus('Success! your clip has been submitted');
-      (e.target as HTMLFormElement).reset();
-
     } catch (error) {
-      setStatus('Error: could not submit your clip.');
+      setStatus('Error: could not connect to server. Please try again.');
       console.error('Fetch error:', error);
+    } finally {
+      setIsSubmitting(false);
     }
-  }
+  };
 
   const handleAnimationComplete = () => {
     console.log('All letters have animated!');
   };
 
-
   return (
     <div className="submit-page-wrapper">
       <div className="submit-welcome">
-         <SplitText
-            text="Submit a Clip!"
-            delay={15}
-            duration={0.6}
-            ease="power3.out"
-            splitType="chars"
-            from={{ opacity: 0, y: 40 }}
-            to={{ opacity: 1, y: 0 }}
-            threshold={0.1}
-            rootMargin="-100px"
-            textAlign="center"
-            onLetterAnimationComplete={handleAnimationComplete}
-          />
+        <SplitText
+          text="Submit a Clip!"
+          delay={15}
+          duration={0.6}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
+          onLetterAnimationComplete={handleAnimationComplete}
+        />
       </div>
 
       <FadeContent blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
@@ -82,7 +100,9 @@ const Submit = () => {
                 <textarea id="message" name="message" rows={4} placeholder="Tell me context I should know in yo clip..." />
               </div>
               
-              <button type="submit">Submit Clip</button>
+              <button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? 'Submitting...' : 'Submit Clip'}
+              </button>
               
               {status && <p className="status-message">{status}</p>}
             </form>
@@ -90,7 +110,7 @@ const Submit = () => {
 
           <div className="submit-right">
             <video className="side-video" autoPlay loop muted playsInline>
-               <source src={submitPageClip} type="video/mp4" />
+              <source src={submitPageClip} type="video/mp4" />
             </video>
           </div>
 
