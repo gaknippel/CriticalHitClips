@@ -36,11 +36,11 @@ const Submit = () => {
         const timeString = resetTime 
           ? resetTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
           : 'later';
-        setStatus(`Too many submissions! Please try again after ${timeString}.`);
+        setStatus(`too many submissions! please try again after ${timeString}.`);
       } else if (!response.ok) {
         setStatus(result.error || 'Error: could not submit your clip.');
       } else {
-        setStatus('Success! your clip has been submitted');
+        setStatus('success! your clip has been submitted');
         (e.target as HTMLFormElement).reset();
         
         // show remaining submissions if available
@@ -87,7 +87,7 @@ const Submit = () => {
             <form onSubmit={handleSubmit}>
               <div className="form-body">
                 <label htmlFor="name">Channel Name (optional)</label>
-                <input type="text" id="name" name="name" placeholder="Your Channel Name" />
+                <input type="text" id="name" name="name" placeholder="your Channel Name" />
               </div>
               
               <div className="form-group">
@@ -97,11 +97,11 @@ const Submit = () => {
               
               <div className="form-group">
                 <label htmlFor="message">Message (optional)</label>
-                <textarea id="message" name="message" rows={4} placeholder="Tell me context I should know in yo clip..." />
+                <textarea id="message" name="message" rows={4} placeholder="tell me context I should know in yo clip..." />
               </div>
               
               <button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? 'Submitting...' : 'Submit Clip'}
+                {isSubmitting ? 'submitting...' : 'Ssubmit Clip'}
               </button>
               
               {status && <p className="status-message">{status}</p>}
