@@ -9,6 +9,15 @@ const HomePage = () => {
         text="Welcome to CriticalHitClips!"
         delay={15}
       />
+
+    /*
+
+    add all videos to this section
+    
+    
+    
+    
+     */
     </div>
   );
 };
