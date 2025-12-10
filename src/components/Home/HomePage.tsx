@@ -1,23 +1,14 @@
-import SplitText from '../ReactBitsStuff/SplitText';
-import './HomePage.css';
+import SplitText from "../ReactBitsStuff/SplitText";
+import "./HomePage.css";
 
 const HomePage = () => {
   return (
-    <div className='home-page-wrapper'>
+    <div className="home-page-wrapper">
       <SplitText
-        className='welcome-message'
+        className="welcome-message"
         text="Welcome to CriticalHitClips!"
         delay={15}
       />
-
-    /*
-
-    add all videos to this section
-    
-    
-    
-    
-     */
     </div>
   );
 };
