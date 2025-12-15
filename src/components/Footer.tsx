@@ -1,4 +1,6 @@
 import './Footer.css';
+import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
     return (
@@ -6,7 +8,7 @@ const Footer = () => {
             <div className="footer-links">
                 <a href="https://github.com/gaknippel" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a href="https://www.youtube.com/@CriticalHitClipstf2" target="_blank" rel="noopener noreferrer">YouTube</a>
-                <a href="/privacy-policy">Privacy Policy</a>
+                <Link to="/privacy-policy">Privacy Policy</Link>
             </div>
             <div className="footer-copyright">
                 © 2025 Greyson Knippel
