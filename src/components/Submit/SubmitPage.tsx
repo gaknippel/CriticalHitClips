@@ -101,7 +101,7 @@ const Submit = () => {
               </div>
               
               <button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? 'submitting...' : 'Ssubmit Clip'}
+                {isSubmitting ? 'submitting...' : 'Submit Clip'}
               </button>
               
               {status && <p className="status-message">{status}</p>}
