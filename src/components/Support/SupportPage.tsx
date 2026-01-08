@@ -22,7 +22,7 @@ const SupportPage = () => {
             
             <div className='support-left'>
               <SplitText
-                text="problems? contact gaknippel@hotmail.com"
+                text="problems? contact criticalhitclips@protonmail.com"
                 delay={15}
                 duration={0.6}
                 ease="power3.out"
