@@ -1,6 +1,8 @@
 # CriticalHitClips
 A website for the CriticalHit Youtube channel that allows you to submit clips! (still in progress)
 
+https://www.criticalhitclips.com
+
 <img src="src/assets/tf2darklogo.ico"
 alt="steam happy :D" title="happy :D" width="150" height="150"/>
 
@@ -14,3 +16,4 @@ alt="steam happy :D" title="happy :D" width="200" height="150"/>
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
