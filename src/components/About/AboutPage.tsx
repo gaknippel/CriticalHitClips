@@ -12,7 +12,7 @@ const AboutPage = () => {
     <div className='about-page-wrapper'>
       
       <SplitText
-        className='welcome-message'
+        className='about-welcome-message'
         text="About"
         delay={15}
       />

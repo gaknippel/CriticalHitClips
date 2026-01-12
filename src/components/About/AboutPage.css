@@ -12,12 +12,12 @@
   box-sizing: border-box;
 }
 
-.welcome-message {
+.about-welcome-message {
   font-family: "Readex Pro", sans-serif;
   font-size: 3rem;
   color: white;
   text-align: center;
-  margin-top: -40px;
+  margin-top: -5rem;
 }
 
 .about-content-box {
@@ -31,7 +31,7 @@
   color: #e0e0e0;
   font-family: "Readex Pro", sans-serif;
   line-height: 1.6;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .about-section {

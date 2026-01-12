@@ -14,12 +14,12 @@ const videos = [
 const HomePage = () => {
   return (
     <div className="home-page-wrapper">
-      <SplitText
-        className="welcome-message"
-        text="Welcome to CriticalHitClips!"
-        delay={15}
-      />
       <div className="video-section">
+        <SplitText
+          className="home-welcome"
+          text="Welcome to CriticalHitClips!"
+          delay={15}
+        />
         {videos.map((video) => (
           <div key={video.id} className="video-container">
             <h2>{video.title}</h2>
