@@ -11,7 +11,7 @@ const Footer = () => {
                 <Link to="/privacy-policy">Privacy Policy</Link>
             </div>
             <div className="footer-copyright">
-                © 2025 Greyson Knippel
+                © 2026 Greyson Knippel
             </div>
         </footer>
     );
